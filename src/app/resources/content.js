@@ -1,40 +1,35 @@
 import { InlineCode } from "@/once-ui/components";
-
+import { Model } from "@/components/blog/Model"
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Ruth",
+  lastName: "Bourke",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  role: "Animation Artist",
+  avatar: "/images/RuthIcon.jpg",
+  // location: "Irish based in Montreal", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "French"], // optional: Leave the array empty if you don't want to display languages
 };
 
-const newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: (
-    <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
-    </>
-  ),
-};
+// const newsletter = {
+//   display: true,
+//   title: <>Subscribe to {person.firstName}'s Newsletter</>,
+//   description: (
+//     <>
+//       I occasionally write about design, technology, and share thoughts on the intersection of
+//       creativity and engineering.
+//     </>
+//   ),
+// };
 
 const social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
   {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
-  },
-  {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/ruth-bourke-604a24134/",
   },
   {
     name: "X",
@@ -44,7 +39,7 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "mailto:ruthbourkeabc@gmail.com",
   },
 ];
 
@@ -73,7 +68,7 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -81,9 +76,13 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I am Animation Artist based in Montreal, Canada. I have experience in 2D and 3D animation. I was a Junior Ink and Paint Artist for Studio Meala. A Junior Build and Rig artist and Scene Prep artist for Kavaleer Productions.
+<br></br>
+<br></br>
+I am proficient in After effects, Blender, Zbrush, Maya, Photoshop, TVpaint and Toonboom. I am flexible and produce high quality work within tight deadlines.
+<br></br>
+<br></br>
+I also edited and help produce the Behind the Half Door Podcast featuring Biddy McLoughlin.
       </>
     ),
   },
@@ -92,41 +91,40 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Kavaleer Productions",
+        timeframe: "Jan 2023 - Feb 2024",
+        role: "Junior 2D Rigger/Scene prep Artist",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Worked on Season 3 of "Boy, Girl, Cat, Dog, Mouse, Cheese".
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Assembled scenes for animators in Adobe Animate
+          </>,
+          <>
+            Build props and characters for a 2D animated show
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: "/images/projects/project-01/cover-01.jpg",
+          //   alt: "Once UI Project",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Studio Meala",
+        timeframe: "Jul 2022 - Sep 2022",
+        role: "Junior Ink and Paint Artist",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Worked on the "Mkhuzi: Spirit Racer" episode for "Kizazi Moto" on Disney+
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Asissted in the coloring scenes of 2D animation in TVpaint
           </>,
         ],
         images: [],
@@ -138,12 +136,12 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Dún Laoghaire Institute of Art, Design and Technology",
+        description: <>Post graduate certificate, 3D sculpting in zbrush.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Ballyfermot College of Further Education",
+        description: <>Bachelor's degree, Animation, Interactive Technology, Video Graphics and Special Effects,</>,
       },
     ],
   },
@@ -152,35 +150,32 @@ const about = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        title:"3D Software",
+        description: <>
+        <b><pre> Zbrush &nbsp; Blender</pre>
+        <pre> Maya &nbsp; 3DSMax</pre> </b>       
+        </>,
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
         ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        title: "2D Software",
+        description: <>
+          <b><pre> Adobe Animate &nbsp; Toonboon Harmony</pre>
+          <pre> Storyboard Pro &nbsp; TVpaint</pre></b>   
+        </>,
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        ],
+      },
+      {
+        title: "Tracking Software",
+        description: <>
+          <b><pre> Shotgrid &nbsp; Office 365</pre></b>   
+        </>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
         ],
       },
     ],
@@ -188,11 +183,44 @@ const about = {
 };
 
 const blog = {
-  label: "Blog",
-  title: "Writing about design and tech...",
+  label: "3D",
+  title: "3D Projects",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
+  images: [
+    {
+      src: "/images/3DImages/Room_night_.png",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/3DImages/Room_render.png",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/3DImages/sword_v1.png",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/3DImages/Grace_render_exp.png",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/3DImages/Pumpkin_Final.png",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/3DImages/Pumpkin_Final_side.png",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    
+  ],
 };
 
 const work = {
@@ -201,85 +229,154 @@ const work = {
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
+  
 };
 
+//   label: "Gallery",
+//   title: "My photo gallery",
+//   description: `A photo collection by ${person.name}`,
+//   // Images from https://pexels.com
+//   images: [
+//     {
+//       src: "/images/gallery/img-01.jpg",
+//       alt: "image",
+//       orientation: "vertical",
+//     },
+//     {
+//       src: "/images/gallery/img-02.jpg",
+//       alt: "image",
+//       orientation: "horizontal",
+//     },
+//     {
+//       src: "/images/gallery/img-03.jpg",
+//       alt: "image",
+//       orientation: "vertical",
+//     },
+//     {
+//       src: "/images/gallery/img-04.jpg",
+//       alt: "image",
+//       orientation: "horizontal",
+//     },
+//     {
+//       src: "/images/gallery/img-05.jpg",
+//       alt: "image",
+//       orientation: "horizontal",
+//     },
+//     {
+//       src: "/images/gallery/img-06.jpg",
+//       alt: "image",
+//       orientation: "vertical",
+//     },
+//     {
+//       src: "/images/gallery/img-07.jpg",
+//       alt: "image",
+//       orientation: "horizontal",
+//     },
+//     {
+//       src: "/images/gallery/img-08.jpg",
+//       alt: "image",
+//       orientation: "vertical",
+//     },
+//     {
+//       src: "/images/gallery/img-09.jpg",
+//       alt: "image",
+//       orientation: "horizontal",
+//     },
+//     {
+//       src: "/images/gallery/img-10.jpg",
+//       alt: "image",
+//       orientation: "horizontal",
+//     },
+//     {
+//       src: "/images/gallery/img-11.jpg",
+//       alt: "image",
+//       orientation: "vertical",
+//     },
+//     {
+//       src: "/images/gallery/img-12.jpg",
+//       alt: "image",
+//       orientation: "horizontal",
+//     },
+//     {
+//       src: "/images/gallery/img-13.jpg",
+//       alt: "image",
+//       orientation: "horizontal",
+//     },
+//     {
+//       src: "/images/gallery/img-14.jpg",
+//       alt: "image",
+//       orientation: "horizontal",
+//     },
+//   ],
+// };
+
 const gallery = {
-  label: "Gallery",
-  title: "My photo gallery",
-  description: `A photo collection by ${person.name}`,
-  // Images from https://pexels.com
+  label: "Live Drawings",
+  title: "My Live Drawings",
+  description: `A collection of live drawings from ${person.name}`,
   images: [
     {
-      src: "/images/gallery/img-01.jpg",
+      src: "/images/liveDrawings/lifedrawing0.png",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/liveDrawings/lifedrawing3.png",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/liveDrawings/lifedrawing1.png",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-02.jpg",
+      src: "/images/liveDrawings/lifedrawing2.png",
       alt: "image",
-      orientation: "horizontal",
+      orientation: "vertical",
     },
+    
     {
-      src: "/images/gallery/img-03.jpg",
+      src: "/images/liveDrawings/lifedrawing4.png",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-04.jpg",
+      src: "/images/liveDrawings/lifedrawing5.png",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-05.jpg",
+      src: "/images/liveDrawings/lifedrawing6.png",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-06.jpg",
+      src: "/images/liveDrawings/lifedrawing7.png",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-07.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-08.jpg",
+      src: "/images/liveDrawings/lifedrawing8.png",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-09.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-10.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-11.jpg",
+      src: "/images/liveDrawings/lifedrawing9.png",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-12.jpg",
+      src: "/images/liveDrawings/lifedrawing10.png",
       alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-13.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-14.jpg",
-      alt: "image",
-      orientation: "horizontal",
+      orientation: "vertical",
     },
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+
+
+
+
+
+export { person, social, home, about, blog, work, gallery};
