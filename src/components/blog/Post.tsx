@@ -11,9 +11,7 @@ interface PostProps {
 
 export default function Post({ post, thumbnail }: PostProps) {
   return (
-    <SmartLink>
-     
-    </SmartLink>
+    post = 2
   );
 
   
